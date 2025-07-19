@@ -14,10 +14,10 @@ public class SoundUtils {
         World world = block.getWorld();
         String soundID;
         if (block.getType().equals(Material.IRON_DOOR)) {
-            soundID = main.getConfig().getString(Config.SOUND_KNOCK_WOOD);
+            soundID = main.getConfig().getString(Config.SOUND_KNOCK_IRON);
             if (soundID == null || soundID.isEmpty()) soundID = "minecraft:item.shield.block";
         } else {
-            soundID = main.getConfig().getString(Config.SOUND_KNOCK_IRON);
+            soundID = main.getConfig().getString(Config.SOUND_KNOCK_WOOD);
             if (soundID == null || soundID.isEmpty()) soundID = "minecraft:entity.zombie.attack_iron_door";
         }
         float volume = (float) main.getConfig().getDouble(Config.SOUND_KNOCK_VOLUME);
@@ -28,7 +28,7 @@ public class SoundUtils {
         world.playSound(location, sound, category,volume,pitch);
         Main.getInstance().debug("World: " + world);
         Main.getInstance().debug("Location: " + location);
-        Main.getInstance().debug("Sound: " + sound.getKeyOrNull());
+        Main.getInstance().debug("Sound: " + soundID);
         Main.getInstance().debug("Category: " + category.name());
         Main.getInstance().debug("Volume: " + volume);
         Main.getInstance().debug("Pitch: " + pitch);
