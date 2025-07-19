@@ -1,6 +1,6 @@
 package de.jeff_media.doorsreloaded.config;
 
-import de.jeff_media.doorsreloaded.Main;;
+import de.jeff_media.doorsreloaded.Main;
 import org.bukkit.configuration.file.FileConfiguration;
 
 public class Config {
